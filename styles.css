@@ -1,0 +1,291 @@
+/* Reset de quelques styles par défaut du navigateur */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Police globale */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #141414;  /* Fond noir typique de Netflix */
+  color: #fff;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-color: #141414; /* Fond noir pour la section header */
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  background-color: #141414;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+/* Section de films (grilles) */
+.container {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.film-item {
+  margin: 15px 0;
+}
+
+.film-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.film-card {
+  position: relative;
+  width: 23%;
+  margin-bottom: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.film-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.film-card:hover {
+  transform: scale(1.05);
+}
+
+.film-card .film-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.film-card .film-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.film-card .film-info a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.film-card .film-info a:hover {
+  text-decoration: underline;
+}
+
+/* Formulaires */
+form {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #222;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px;
+  width: 100%;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #f40612;
+}
+
+/* Footer */
+footer {
+  background-color: #141414;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .film-list {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .film-card {
+      width: 80%;
+  }
+
+  header h1 {
+      font-size: 28px;
+  }
+
+  nav a {
+      font-size: 16px;
+      margin: 5px;
+  }
+}
+
+/* Image marketing réduite */
+.hero-img {
+  width: 200px;  /* Largeur de 200px */
+  height: 200px; /* Hauteur de 200px */
+  object-fit: cover; /* Remplir sans déformation */
+  margin-bottom: 20px;
+}
+
+.image-container {
+  text-align: center;  /* Centre l'image horizontalement */
+}
+
+/* Conteneur des films en grille horizontale */
+.film-horizontal {
+  display: flex;
+  justify-content: space-between;  /* Espacement égal entre les films */
+  gap: 20px;  /* Espacement entre les films */
+  overflow-x: auto;  /* Permet un défilement horizontal */
+  padding: 20px;
+}
+
+/* Chaque film dans la grille */
+.film-item {
+  background-color: #222;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  flex: 0 0 auto;  /* Empêche les éléments de s'étirer */
+  width: 180px;  /* Largeur fixe pour chaque film */
+}
+
+/* Style de l'image de chaque film */
+.film-item img {
+  width: 100%;
+  height: 250px;  /* Ajuste la taille de l'image */
+  object-fit: cover;  /* L'image couvre l'espace sans déformation */
+}
+
+/* Titre du film */
+.film-item h3 {
+  padding: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Liens */
+.film-item a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Effet au survol des films */
+.film-item:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Style global de la barre de défilement */
+::-webkit-scrollbar {
+  width: 12px; /* Largeur de la barre de défilement */
+  height: 12px; /* Hauteur de la barre de défilement horizontale */
+}
+
+/* Style de la partie qui fait défiler (la "poignée") */
+::-webkit-scrollbar-thumb {
+  background-color: #ff5722; /* Couleur de la poignée de défilement */
+  border-radius: 10px; /* Bord arrondi pour un look plus lisse */
+  border: 3px solid #e0e0e0; /* Bordure autour de la poignée */
+}
+
+/* Style lorsque l'utilisateur survole la poignée */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff7043; /* Couleur au survol */
+}
+
+/* Style de la barre de défilement (partie vide) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Couleur de fond de la zone de défilement */
+  border-radius: 10px; /* Bord arrondi de la barre */
+}
+
+/* Style de la barre de défilement horizontale */
+::-webkit-scrollbar-horizontal {
+  height: 10px; /* Hauteur de la barre horizontale */
+}
+
+/* Style de la barre de défilement verticale */
+::-webkit-scrollbar-vertical {
+  width: 10px; /* Largeur de la barre verticale */
+}

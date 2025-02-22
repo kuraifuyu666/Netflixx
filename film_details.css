@@ -1,0 +1,26 @@
+/* film_details.css */
+
+body {
+  text-align: center; /* Centrer le texte globalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Prendre toute la hauteur de l'écran */
+  flex-direction: column; /* Pour que le contenu soit centré verticalement */
+}
+
+.container {
+  width: 80%; /* La largeur de votre contenu */
+  max-width: 800px; /* Optionnel, pour ne pas étirer trop larges sur des écrans grands */
+  margin: 0 auto; /* Centrer horizontalement */
+}
+
+img {
+  max-width: 100%; /* S'assurer que l'image s'adapte à la largeur du conteneur */
+  height: auto;
+}
+
+iframe {
+  max-width: 100%; /* S'assurer que la vidéo s'adapte */
+  margin-top: 20px;
+}
