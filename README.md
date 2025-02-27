@@ -74,7 +74,7 @@ RUN apt-get update && \
 WORKDIR /var/www/html
 ```
 
-**Fichier Dockerfile pour PHP**
+**Fichier Dockerfile pour PHPMYADMIN**
 
 Créez un dossier nommé phpmyadmin et ajoutez-y le fichier suivant :
 
